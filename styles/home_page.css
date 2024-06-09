@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------------------||VARIABLES||------------------------------------------------------ */
+:root{
+    /* ||COLORS */
+    --TEXT-COLOR: #fff;
+    --BILLIE-EILISH-BTN-COLOR: #D4BEA5;
+    --SIA-BTN-COLOR: #FFC300;
+    --LANA-DEL-REY-BTN-COLOR: #9dabff;
+    --ADELE-BTN-COLOR: #b3b3b3;
+
+    /* ||FONTS */
+    --FF: "Inter", sans-serif;
+    --MAIN-DESCRIPTION-FONT-SIZE: 1.5rem;
+    --ARTISTS-BUTTONS-FONT-SIZE: 200rem;
+
+    /* ||FONTS MOBILE VERSION */
+    --MAIN-DESCRIPTION-FONT-SIZE: 1rem;
+    --ARTISTS-BUTTONS-FONT-SIZE: 1.5rem;
+}
+/* ------------------------------------------------------||BODY||------------------------------------------------------ */
+body {
+    background-image: url(../Data/imags/main_page_imgs/desktop_main_page_image/home_page_background.png);
+    background-size: cover;
+    text-transform: capitalize;
+    font-family: var(--FF);
+    color:  var(--TEXT-COLOR);
+    transition: 0.3s;
+}
+
+/* ------------------------------------------------------||HEADER||------------------------------------------------------ */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    animation-duration: 1s;
+    animation-name: home_page_header_animation;
+    animation-timing-function: ease-in-out;
+
+}
+
+.header__img {
+    width: 25%;
+}
+
+.header__text {
+    font-size: var(--MAIN-DESCRIPTION-FONT-SIZE);
+    font-weight: 800;
+}
+
+
+/* ------------------------------------------------------||MAIN||------------------------------------------------------ */
+.artists {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 10%;
+    animation-duration: 0.9s;
+    animation-name:home_page_header_animation;
+    animation-timing-function: ease-in-out;
+}
+
+.artists__ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.artists__ul__li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.artists__list__link {
+    transition: 1s ease;
+    color: #fff;
+    text-decoration: none;
+}
+
+.artists__list__link:hover {
+    font-size: 4rem;
+}
+
+
+/* ------------------------------------------------------||FOOTER||------------------------------------------------------ */
+.footer {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 48%;
+    transform: translateX(-49%);
+    text-align: center;
+    width: 100%;
+    margin: 1%;
+}
+
+.footer__link {
+    color: #62C6FF;
+}
+
+
+
+/* ------------------------------------------------------||ANIMATION||------------------------------------------------------ */
+@keyframes home_page_header_animation {
+    from {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* ------------------------------------------------------||SMALL DEVICIES MEDIA||------------------------------------------------------ */
+@media (max-width: 768px) {
+    body {
+        background-image: url(../Data/imags/main_page_imgs//mobile_main_page_images/home_page_background.jpg);
+        background-size: cover;
+        text-transform: capitalize;
+        font-family: var(--FF);
+        color:  var(--TEXT-COLOR);
+        transition: 0.3s;
+    }
+
+    /*----|| HEADER ||----*/
+    .header__img {
+        width: 60%;
+    }
+
+    .header__text {
+        text-align: center;
+        font-size: 0.7rem;
+    }
+
+     /*----|| MAIN ||----*/
+    .artists {
+        font-size: 2rem;
+    }
+
+    .artists__list__link:focus,
+    .artists__list__link:hover {
+        font-size: 2rem;
+    }
+   
+    .artists__ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10rem;
+    }
+
+    .artists__ul__li{
+        padding: 1rem 0;
+    }
+}
+

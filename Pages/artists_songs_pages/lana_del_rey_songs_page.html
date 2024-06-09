@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lana Del Rey | Feel The Music</title>
+        <!-----------------------------------CSS LINK----------------------------------->
+    <link rel="stylesheet" href="../../styles/artists_songs_styles/lana_del_rey_songs_page.css">
+    <link rel="icon" href="../../Data/imags/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./script.js"></script>
+</head>
+<body>
+
+    <!-----------------------------------THE MAIN INTERFACE----------------------------------->
+    <div class="intro">
+        <div class="intro__texts">
+            <h1 class="intro__title">lana del rey</h1>
+            <p class="intro__text">Lana Del Rey, born Elizabeth Woolridge Grant, is an American singer-songwriter known for her cinematic, melancholic sound and nostalgic themes, blending contemporary pop with retro influences.</p>
+            <a class="intro__read_btn">read more</a>
+        </div>
+        <img class="intro__img" src="../../Data/imags/artists_page_imgs/lanaDelRey_page_img.png">
+    </div>
+
+    
+    <div class="mobile_version_texts">
+        <p class="mobele__intro__text">Lana Del Rey, born Elizabeth Woolridge Grant, is an American singer-songwriter known for her cinematic, melancholic sound and nostalgic themes, blending contemporary pop with retro influences.</p>
+        <div class="mobile__extra-line"></div>
+        <a class="mobile__intro__read_btn">read more</a>
+    </div>
+
+        <!-----------------------------------SONGS INTERFACE----------------------------------->
+    <mian class="main">
+        <h2 class="main__title">Popular songs</h2>
+
+            <!-----------------------------------SONGS BARS (GENERATING IN JAVASCRIPT)----------------------------------->
+        <div class="main__songs">
+            <!-- <div class="main__songs__song">
+                <img class="main__songs__song__img" src="../../Data/imags/artists_songs_images/billie_eilish_songs_imgs/the-dinter-bittersute.png">
+                <h4 class="main__songs__song__name">THE DINER</h4>
+                <i class="fa-solid fa-play main__songs__song__start-sign" id="playIcon1" data-id="1"></i>
+                <audio id="song1" data-id="1" src="../../Data/songs/billie_eilish/Billie Eilish - THE DINER (Official Lyric Video).mp3"></audio>
+            </div>
+         -->
+        </div>
+    </mian>
+
+        <!-----------------------------------SONGS CONTROLES----------------------------------->
+    <div class="songs__controls">
+        <div class="controles">
+            <div><i onclick="playPrevious()" class="fa-solid fa-backward js-perv"></i></div>
+            <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+            <div><i onclick="playNext()" class="fa-solid fa-forward js-next"></i></div>
+        </div>
+        <div class="centered-container">
+            <div class="timeline">
+                <span id="currentTime">0:00</span>
+                <input type="range" value="0" id="progress">
+                <span id="totalTime">0:00</span>
+            </div>
+            <div class="volume-control">
+                <i class="fa-solid fa-volume-up" id="volumeIcon"></i>
+                <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" title="Volume">
+            </div>
+        </div>
+    </div>
+   
+    <div class="extra-space"> </div>
+    
+        <!-----------------------------------JAVASCRIPT SCRIPTS----------------------------------->
+    <script src="../../Data/API/lana_del_rey.js"></script>
+    <script src="../../scripts/artist.js"> </script>
+</body>
+</html>
